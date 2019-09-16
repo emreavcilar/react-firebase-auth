@@ -29,7 +29,7 @@ window.onload = () => {
 
     let store = createStore(reducer,typeof window!=="undefined" && window.initialStoreData ? window.initialStoreData : {}, applyMiddleware(...middleware));
 
-    ReactDOM.hydrate(
+    ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
                 <App />
